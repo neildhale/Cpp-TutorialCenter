@@ -7,14 +7,12 @@ class Student{
 		int id;
 		string name;
 
-	public:
 	Student(){                      /*Default Constructor*/
 		id=1;
 		name="Nilesh";
 	}
 
 	Student(int Id,string N){       /*Parameterized Constructor*/
-//	cout<<"name"<<N;
 		id=Id;
 		name=N;
 	}
