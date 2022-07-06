@@ -4,16 +4,16 @@ using namespace std;
 class Student{
 	
 	public:
-	void Insert(int id){
+	void Insert(double id){
 		cout<<"Insert Id="<<id<<endl;
 	}
 
 };
 
 int main(){
-	char a='2';
+	int a=2;
 	float b=2.5;
-	double c=3;
+	char c=3;
 	
 	Student S1,S2,S3;
 	S1.Insert(a);

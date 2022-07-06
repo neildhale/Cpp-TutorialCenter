@@ -12,13 +12,19 @@ class Student{
 		cout<<"Second insert RollNo.="<<rollno<<endl;
 	}
 
+	void Insert(char* name){
+		cout<<"Name="<<name;
+	}
+
 };
 
 int main(){
 	char a=2;
 	float b=2.5;
 	
-	Student S1,S2;
+	Student S1;
 	S1.Insert(a);
-	S2.Insert(b);
+	S1.Insert(b);
+	S1.Insert("sachet");
+
 }
