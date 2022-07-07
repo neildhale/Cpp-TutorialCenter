@@ -1,21 +1,26 @@
 #include<iostream>
 using namespace std;
 
-class COUNT{
-	public:
-	static int count;
+class Counter{
+	public:                   
+	static int instanceCount;     
 
-	public:
-	COUNT(){
-		count++;
+	Counter(){
+		instanceCount++;
+	}
+
+	void GetInstanceCount(){
+		cout<<"No. of objects created="<<instanceCount<<endl;
 	}
 	
 };
 
-int COUNT::count;
+int Counter::instanceCount;
 
 int main(){
-	COUNT C1,C2,C3,C4,C5;
-	cout<<"No. of objects created="<<COUNT::count<<endl;
+
+	Counter C,C1,C2,C3,C4;
+	C.GetInstanceCount();
+	return(0);
 }
 
