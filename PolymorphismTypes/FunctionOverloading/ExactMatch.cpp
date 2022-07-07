@@ -7,7 +7,8 @@ class Student{
 	void Insert(int id){
 		cout<<"First insert Id="<<id;
 	}
-
+	 			/*Same function name and different argument in
+		  		 same class is called as Function Overloading*/
 	void Insert(double rollno){
 		cout<<"Second insert RollNo.="<<rollno;
 	}

@@ -3,18 +3,15 @@ using namespace std;
 
 class Student{
 	
-	public:
-	void Insert(int id){
+	public:				/*There are only Two type Promotion*/
+	void Insert(int id){		/*char convert into int*/
 		cout<<"First insert Id="<<id<<endl;
 	}
 
-	void Insert(double rollno){
+	void Insert(double rollno){     /*float convert into double*/
 		cout<<"Second insert RollNo.="<<rollno<<endl;
 	}
 
-	void Insert(char* name){
-		cout<<"Name="<<name;
-	}
 
 };
 
@@ -25,6 +22,5 @@ int main(){
 	Student S1;
 	S1.Insert(a);
 	S1.Insert(b);
-	S1.Insert("sachet");
 
 }
