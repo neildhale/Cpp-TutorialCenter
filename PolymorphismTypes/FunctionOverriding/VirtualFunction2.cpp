@@ -1,35 +1,35 @@
 #include<iostream>
 using namespace std;
 
-class A{
+class Base{
 	public:
-	void f1(){
+	void function1(){
 		cout<<"Base class calling"<<endl;
 	}
-	virtual void f2(){
+	virtual void function2(){
 		cout<<"Base class calling"<<endl;
 	}
 };
 
-class B:public A{
+class Derived:public Base{
 
 	public:
 
-	void f1(){
+	void function1(){
 		cout<<"Derived class calling"<<endl;
 	}
-	void f2(){
+	void function2(){
 		cout<<"Derived class calling"<<endl;
 	}
 };
 
 int main(){
 
-	A *p;      /* p is A type pointer */
-	B o2;
-	p=&o2;     /* p stores o2 address */
-	p->f1();   /*EB-Compiler find pointer type*/
-	p->f2();   /*LB-Compiler find pointer address*/
+	Base *p;      /* p is Base class type pointer */
+	Derived obj;
+	p=&obj;     /* p stores obj address */
+	p->function1();   /*EB-Compiler find pointer type*/
+	p->function2();   /*LB-Compiler find pointer address*/
 	return(0);
 }
 	
