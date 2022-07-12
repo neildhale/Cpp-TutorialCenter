@@ -8,6 +8,7 @@ int main(){
 	M.insert(make_pair(10,"Nilesh"));
 	M.insert(make_pair(20,"Chetan"));
 	M.insert(make_pair(30,"Rahul"));
+	M.insert(make_pair(30,"jimmy"));
 
 	M.insert(pair<int,string>(40,"Rohit"));
 
@@ -16,6 +17,11 @@ int main(){
 		cout<<it->first<<" "<<it->second<<endl;
 	}
 
+	for(auto i : M){
+	cout<<"new for loop "<<i.first<<" second value ::"<<i.second<<endl;
+	}
+
+	cout<<"Size="<<M.count(30)<<endl;
 	cout<<"Size="<<M.size()<<endl;
 
 	M.erase(30);

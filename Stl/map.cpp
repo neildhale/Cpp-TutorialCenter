@@ -19,7 +19,7 @@ int main(){
 		cout<<i.first<<" "<<i.second<<endl;
 	}
 
-	cout<<"finding 5="<<m.count(5)<<endl;
+	cout<<"finding 5= count::"<<m.count(5)<<endl;
 
 	m.erase(2);
 
