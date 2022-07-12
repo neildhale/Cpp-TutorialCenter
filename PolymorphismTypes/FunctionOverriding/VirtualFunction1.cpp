@@ -25,10 +25,10 @@ class Derived:public Base{
 
 int main(){
 
-	Base *p,obj;      /* p is Base Class type pointer */
-	p=&obj;           /* p stores obj address */
-	p->function1();   /*EB(Early Binding)-Compiler find pointer type*/
-	p->function2();   /*LB(Late Binding)-Compiler find pointer address*/
+	Base *pBase,objBase;      /* pBase is Base Class type pointer */
+	pBase=&objBase;           /* pBase stores objBase address */
+	pBase->function1();   /*EB(Early Binding)-Compiler find pointer type*/
+	pBase->function2();  /*LB(Late Binding)-Compiler find pointer address*/
 	return(0);
 }
 	
