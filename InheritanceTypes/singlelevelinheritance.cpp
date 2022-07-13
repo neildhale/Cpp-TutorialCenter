@@ -1,16 +1,17 @@
 #include<iostream>
 using namespace std;
 
-class student{
+class Student{
+	private:
 	int id;
 	string name;
 	
 	public:
-	student(){
+	Student(){
 		cout<<"Student Base Object Created"<<endl;
 	}
 
-	~student(){
+	~Student(){
 		cout<<"Student Base Object Destroyed"<<endl;
 	}
 
@@ -28,16 +29,17 @@ class student{
 	}
 };
 
-class person:public student{
+class Person:public Student{
+	private:
 	int fee;
 	string course;
 	
 	public:
-	person(){
+	Person(){
 		cout<<"Person Derived Object Created"<<endl;
 	}
 
-	~person(){
+	~Person(){
 		cout<<"Person Derived Object Destroyed"<<endl;
 	}
 
@@ -58,7 +60,7 @@ class person:public student{
 };
 
 int main(){
-	person P1Derived;
+	Person P1Derived;
 	P1Derived.detail();
 	P1Derived.display();
 	return(0);

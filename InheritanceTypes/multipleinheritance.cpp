@@ -2,6 +2,7 @@
 using namespace std;
 
 class Student{
+	private:
 	int rollno;
 	string name;
 
@@ -29,6 +30,7 @@ class Student{
 
 
 class Staff{
+	private:
 	int id;
 	string Name;
 
@@ -57,6 +59,14 @@ class Staff{
 
 
 class Institute:public Staff,public Student{
+	/*constructor order==> 1.Staff 2.Student 3.Institute*/
+	
+//if/*class Institute:public Student,public Staff*/
+//then/*constructor order==> 1.Student 2.Staff 3.Institute*/
+
+	/*Destructor order will be reverse of that Constructor order*/
+
+	private:
 	string college;
 	
 	public:
