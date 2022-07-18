@@ -43,7 +43,7 @@ class Staff{
 	~Staff(){
 		cout<<"Staff Derived1 Object Destroyed"<<endl;
 	}
-	void Entry(){
+	void getStaffEntry(){
 		cout<<"Enter Staff Id:";
 		cin>>id;
 		cin.ignore();
@@ -51,7 +51,7 @@ class Staff{
 		getline(cin,Name);
 	}
 
-	void display(){
+	void displayStaffDetails(){
 		cout<<"Staff Id="<<id<<endl;
 		cout<<"Staff Name="<<Name<<endl;
 	}
@@ -79,14 +79,14 @@ class Institute:public Staff,public Student{
 	}
 	void College(){
 		Insert();
-		Entry();
+		getStaffEntry();
 		cout<<"Enter College Name:";
 		getline(cin,college);
 	}
 
 	void Execute(){
 		cout<<"College Name="<<college<<endl;
-		display();
+		displayStaffDetails();
 		Display();
 	}
 };
