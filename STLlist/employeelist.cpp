@@ -17,20 +17,20 @@ class Employee{
 	
 };
 int main(){
-	list<Employee> l1;
+	list<Employee> listofEmployee;
 
-	Employee E1(1,"Chetan",9823403896);
-	l1.push_front(E1);
-	Employee E2(2,"Nilesh",8999139430);
-	l1.push_back(E2);
+	Employee objEmployee1(1,"Chetan",9823403896);
+	listofEmployee.push_front(objEmployee1);
+	Employee objEmployee2(2,"Nilesh",8999139430);
+	listofEmployee.push_back(objEmployee2);
 
 	list<Employee>::iterator it;
-	for(it=l1.begin();it!=l1.end();it++){
+	for(it=listofEmployee.begin();it!=listofEmployee.end();it++){
 		int id=it->id;
 		string name=it->name;
 		unsigned long int contactno=it->contactno;
 		cout<<"Id="<<id<<" "<<"Name="<<name<<" "<<"Mobile No.="<<contactno<<endl;
 	}
 
-	cout<<"Size of the list l1="<<l1.size()<<endl;
+	cout<<"Size of the listofEmployee="<<listofEmployee.size()<<endl;
 }

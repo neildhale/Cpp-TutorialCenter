@@ -6,7 +6,7 @@ using namespace std;
 struct Player{
 	int id;
 	string name;
-
+	
 	Player(int playerId,string playerName) : id(playerId),name(playerName){}
 };
 
