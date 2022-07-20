@@ -66,6 +66,40 @@ class Employee{
  }
 
 
+ string updateStaffName(int Id,string Name){
+
+        string name;
+        list<Staff>::iterator I;
+
+        for(I=listofStaff.begin();I!=listofStaff.end();I++){
+             int id=I->id;
+             if(Id==id){
+              I->name=Name;
+	      cout<<"Name="<<Name<<endl;
+                break;
+              }
+
+        }
+           return Name;
+ }
+
+
+ int updateStaffId(int Id,string Name){
+        int id;
+        list<Staff>::iterator i;
+
+        for(i=listofStaff.begin();i!=listofStaff.end();i++){
+                string name=i->name;
+                if(Name==name){
+                i->id=Id;
+		cout<<"Id="<<Id<<endl;
+                break;
+                }
+        }
+        return Id;
+ }
+
+
 };
 
 int main(){
@@ -76,8 +110,11 @@ int main(){
 	objEmployee.setStaffDetail(103,"Rohit");
 	objEmployee.setStaffDetail(104,"Rahul");
 	objEmployee.getStaffDetails();
-	objEmployee.getStaffName(101);
 	cout<<"Name="<<objEmployee.getStaffName(103)<<endl;
-	objEmployee.getStaffId("Chetan");
 	cout<<"ID="<<objEmployee.getStaffId("Rahul")<<endl;
+	objEmployee.updateStaffName(104,"Virat");
+	objEmployee.getStaffDetails();
+	objEmployee.updateStaffId(105,"Virat");
+	objEmployee.getStaffDetails();
+
 }
